@@ -1,10 +1,12 @@
 body {
     font-family: 'Roboto Slab', serif;
+    background-color: #C48829;
 }
 
 header {
-    background: #bbbbbb;
+    background: #040404;
     padding: 20px 0;
+    min-width: 100%;
 }
 
 .caixa {
@@ -13,10 +15,18 @@ header {
     margin: 0 auto;
 }
 
+.caixa img {
+    width: 300px;
+}
+
 nav {
     position: absolute;
     top: 110px;
-    right: 0;
+    right: 40px;
+}
+
+nav ul {
+    margin: 35px 0;
 }
 
 nav li {
@@ -26,15 +36,17 @@ nav li {
 
 nav a {
     text-transform: uppercase;
-    color: black;
+    color: white;
     font-weight: bold;
     font-size: 22px;
     text-decoration: none;
+    text-shadow: 2px 2px 2px #56230C;
 }
 
 nav a:hover {
-    color: #C78C19;
+    color: #56230C;
     text-decoration: underline;
+    text-shadow: 2px 2px 2px #2b1206;
 }
 
 .produtos {
@@ -53,14 +65,15 @@ nav a:hover {
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 10px;
+    background-color: white;
 }
 
 .produtos li:hover {
-    border-color: #C78C19;
+    border-color: rgb(180, 72, 10);
 }
 
 .produtos li:active {
-    border-color: #088C19;
+    border-color: #56230C;
 }
 
 .produtos li:hover h2 {
@@ -88,6 +101,11 @@ footer {
     padding: 40px 0;
 }
 
+footer img {
+    height: 150px;
+    width: auto;
+}
+
 .copyright {
     color: white;
     font-size: 13px;
@@ -99,7 +117,8 @@ footer {
 }
 
 form {
-    margin: 40px 0;
+    margin: 0 auto;
+    width: 75%;
 }
 
 form label,
@@ -113,7 +132,7 @@ form legend {
     display: block;
     margin: 0 0 20px;
     padding: 10px 25px;
-    width: 50%;
+    width: 80%;
 }
 
 .checkbox,
@@ -122,9 +141,10 @@ form legend {
 }
 
 .enviar {
-    width: 40%;
+    margin: 10px 25px 0;
+    width: 80%;
     padding: 15px 0;
-    background: orange;
+    background: #A34015;
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -135,12 +155,12 @@ form legend {
 }
 
 .enviar:hover {
-    background-color: darkorange;
-    transform: scale(1.2);
+    background-color: #56230C;
 }
 
 table {
-    margin: 20px 0 40px;
+    margin: 20px auto 40px;
+    width: 50%;
 }
 
 thead {
@@ -155,9 +175,23 @@ th {
     padding: 8px 15px;
 }
 
+td {
+    background-color: white;
+}
+
 /* CSS da página inicial */
+
+
+#banner {
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
 .banner {
     width: 100%;
+    position: absolute;
+    top: -20px;
 }
 
 .titulo-principal {
@@ -171,7 +205,7 @@ th {
 
 .principal {
     padding: 3em 0;
-    background-color: #fefefe;
+    background-color: #C48829;
     width: 940px;
     margin: 0 auto;
 }
@@ -196,7 +230,7 @@ th {
 
 .mapa {
     padding: 3em 0;
-    background: linear-gradient(#fefefe, #888);
+    background: linear-gradient(#C48829, #92510b);
 }
 
 .mapa-conteudo {
@@ -211,7 +245,7 @@ th {
 
 .beneficios {
     padding: 3em 0;
-    background: #888;
+    background: #92510b;
 }
 
 .conteudo-beneficios {
@@ -251,6 +285,16 @@ th {
 .video {
     width: 560px;
     margin: 2em auto;
+}
+
+@media screen and (max-width: 940px) {
+    .caixa,
+    .principal,
+    .conteudo-beneficios,
+    .mapa-conteudo,
+    .video {
+        width: auto;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -293,6 +337,7 @@ th {
     /* Contato */
     #contato-main {
         margin: 0 20px;
+        width: 50vw;
     }
 
     .input-padrao {
